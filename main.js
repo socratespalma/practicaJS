@@ -147,5 +147,47 @@
 // setInterval(), ocurre varias veces despues de cierto tiempo, y setTimeout(), ocurre una vez despues de cierto tiempo
 
 //---- Arreglos ----
-let arreglo = ["elemento1", "elemento2", "elemento3"];
-console.log(arreglo[1]);
+// let arreglo = ["elemento1", "elemento2", "elemento3"];
+// console.log(arreglo[1]);
+// console.log(arreglo.length);
+
+// para incializar arreglos vacios
+// var amigos = [];
+// amigos = [49, true, null, "socrates"];
+// los arreglos pueden tener diferentes tipos de datos
+// console.log(amigos);
+// amigos.push("Sam"); agrega elemento al final
+// amigos.push("Sammy");
+// amigos.push("Sammy2");
+// amigos.pop(); elimina el ultimo elemento
+// amigos.unshift("Sam");
+
+// agrega elemento al inicio del arreglo
+// amigos.shift("Sam"); elimina el primer elemento de un arreglo
+// amigos.splice(1, 1);
+// elimina un elemento desde cierto indice hasta una cierta cantidad
+
+// console.log(amigos);
+// console.log(amigos.indexOf("Sam"));
+// imprimir indice de algun elemento dentro del arreglo
+// amigos.slice() para copiar partes de un arreglo o un arreglo entero
+// Iteracion de arreglos
+// ya sea a traves de un ciclo for o un foreach
+
+// ---- Objetos ----
+// Arreglos y objetos anidados
+// let personas = [
+//   {
+//     nombre: "Harry",
+//     edad: 24,
+//     padres: [
+//       { nombre: "asdfg", edad: 49 },
+//       { nombre: "qwerty", edad: 52 },
+//     ],
+//   },
+//   { nombre: "Fernando", edad: 23 },
+// ];
+// console.log(personas[0].padres[1].edad);
+// usar notacion de corchetes cuando la propiedad inicie con un numero, cuando tenga varias palabras o cuando el nombre de la propiedad es un valor de una variable
+
+// ---- Manipulacion del DOM ----
