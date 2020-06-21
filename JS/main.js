@@ -191,3 +191,137 @@
 // usar notacion de corchetes cuando la propiedad inicie con un numero, cuando tenga varias palabras o cuando el nombre de la propiedad es un valor de una variable
 
 // ---- Manipulacion del DOM ----
+// DOM es la interfaz entre JS y HTML + CSS
+// var h1 = document.querySelector("h1");
+// h1.style.color = "pink";
+
+// var body = document.querySelector("body");
+// var esNaranja = false;
+
+// setInterval(function () {
+//   if (esNaranja) {
+//     body.style.background = "white";
+//   } else {
+//     body.style.background = "orange";
+//   }
+//   esNaranja = !esNaranja;
+// }, 1000);
+
+// document.getElementsByName("name atribute");
+// document.getElementById("id atribute");
+// document.getElementsByClassName("class atribute");
+// document.getElementsByTagName("tag atribute");
+// document.querySelector("css selector"); devuelve el primer elemento con el nombre del selector que coincida
+// document.querySelectorAll("css selector"); devuelve una lista de elementos que coincidan con el nombre del selector
+
+let p = document.getElementById("parrafo1");
+p.classList.add("blue");
+// agrega clase css blue al elemento con id parrafo1
+p.textContent = "Hola soy un estudiante de ingenieria de sistemas";
+// modifica el contenido del texto
+p.innerHTML;
+// devuelve el contenido html inicial
+
+let titulo = document.getElementById("titulo1");
+// titulo.classList.add("blue"); añadir clase css a un elemento
+// titulo.classList.remove("blue");
+// eliminar clase css a un elemento
+// titulo.classList.toggle("blue");
+// Cambiar (añadir o eliminar) clase css
+// p.style.color = "blue";
+// p.style.marginTop = "30px";
+// p.style.background = "pink";
+
+// propiedad style solo se usa con el objetivo de hacer pruebas unitarias
+
+let enlace = document.querySelector("a");
+enlace.getAttribute("href");
+// obtiene atributo
+enlace.setAttribute("href", "https://www.reddit.com/");
+// cambia atributos en un elemento
+let imagen = document.querySelector("img");
+
+imagen.setAttribute("src", "../IMG/MarketingDigital.jpg");
+// cambia imagen por otra
+
+let tarea = document.createElement("li");
+// creando elemento li
+tarea.textContent = "Tarea 3";
+// asignandole texto
+let list = document.getElementById("lista");
+// tomar elemento ul
+list.appendChild(tarea);
+// añadirle el elemento li
+// si se desea agregar una tarea al inicio
+let tarea2 = document.createElement("li");
+// crear otro elemento li
+tarea2.textContent = "Tarea 4";
+// asignarle nombre
+let primerElemento = list.children[0];
+// darle la posicion inicial del elemento lista
+list.insertBefore(tarea2, primerElemento);
+// insertar en lista
+
+// si se desea eliminar una tarea de la lista
+let elementoElim = list.children[2];
+// asignar tarea a eliminar (tarea 2)
+elementoElim.remove();
+// eliminarla
+
+let btn = document.querySelector(".btn");
+
+// Eventos
+
+btn.addEventListener("click", function () {
+  titulo.textContent = "Se ha hecho click";
+});
+
+// o declarar la funcion de la siguiente manera
+
+btn.addEventListener("click", clickNuevo);
+
+function clickNuevo() {
+  enlace.textContent = "Se ha hecho click nuevamente";
+}
+
+let inp = document.querySelectorAll("input");
+
+for (let i = 0; i < inp.length; i++) {
+  inp[i].addEventListener("keypress", function (event) {
+    if (event.which === 13) {
+      enlace.textContent = this.value;
+    }
+  });
+}
+
+enlace.addEventListener("click", function (event) {
+  event.preventDefault();
+  alert("No funciona el link?");
+});
+// la propiedad which es para saber que tecla fue presionada
+
+// inp.addEventListener("keypress", presionar);
+
+// function presionar() {
+//   enlace.textContent = inp.value;
+// }
+
+// si se desea se puede poner el evento separado como keydown y keyup
+
+// btn.onclick = function () {
+//   console.log("has dado un click");
+// };
+// btn.onmouseover = function () {
+//   console.log("El puntero esta encima");
+// };
+
+// Reto del DOM avanzado
+
+// let eventosMDN = document.querySelectorAll("code");
+// let c=0;
+// for (let i = 0; i < eventosMDN.length; i++) {
+//     c++;
+// }
+// console.log(c);
+
+// respuesta: 699 eventos

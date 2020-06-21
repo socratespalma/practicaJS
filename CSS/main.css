@@ -1,0 +1,11 @@
+.blue {
+  color: blue;
+  background-color: coral;
+  margin-top: 5vh;
+}
+
+.imagen1 {
+  width: 10vw;
+  height: 20vh;
+  border-radius: 50%;
+}
