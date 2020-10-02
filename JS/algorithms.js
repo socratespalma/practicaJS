@@ -52,8 +52,8 @@ const circumference = (a) => {
       break;
     default:
       let diameter = Math.pow(a, 2);
-      let area = PI * (Math.pow(diameter, 2) / 4);
-      let perimeter = PI * diameter;
+      let area = (PI * (Math.pow(diameter, 2) / 4)).toFixed(2);
+      let perimeter = (PI * diameter).toFixed(2);
       console.log(
         `The diameter of a circumference is ${diameter} , the area is ${area} , and perimeter is ${perimeter}`
       );
@@ -72,5 +72,52 @@ for (let i = 0; i < grades.length; i++) {
   sum += grades[i];
 }
 
-mean = sum / grades.length;
+mean = (sum / grades.length).toFixed(2);
 console.log(`This student has ${mean} as mean`);
+
+// 6. Write a function that receives two values and tell if they are equal, greater or less
+
+const comparison = (a, b) => {
+  a > b
+    ? console.log(`${a} is greater than ${b}`)
+    : a < b
+    ? console.log(`${a} is less than ${b}`)
+    : console.log(`${a} and ${b} are equal`);
+};
+
+comparison(1, 2);
+
+// 7. Write a function that convert Celsius to Fahrenheit
+
+const temperature = (a) => {
+  let tempFar = a * 1.8 + 32;
+  console.log(`${a} Celsius is equal to ${tempFar} Fahrenheit`);
+};
+
+temperature(33);
+
+// YDKJS challenge #1
+// Write a program to calculate the total price of your phone purchase.
+// You will keep purchasing phones (hint: loop!) until you
+// run out of money in your bank account. You’ll also buy accessories
+// for each phone as long as your purchase amount is below
+// your mental spending threshold.
+
+// • After you’ve calculated your purchase amount, add in the tax,
+// then print out the calculated purchase amount, properly formatted.
+
+// • Finally, check the amount against your bank account balance to
+// see if you can afford it or not.
+
+// • You should set up some constants for the “tax rate,” “phone
+// price,” “accessory price,” and “spending threshold,” as well as a
+// variable for your “bank account balance.”
+
+// • You should define functions for calculating the tax and for formatting
+// the price with a “$” and rounding to two decimal
+// places.
+
+// • Bonus Challenge: Try to incorporate input into this program,
+// perhaps with the prompt(..) covered in “Input” on page 6. You
+// may prompt the user for their bank account balance, for example.
+// Have fun and be creative!
