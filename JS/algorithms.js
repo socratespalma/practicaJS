@@ -121,3 +121,36 @@ temperature(33);
 // perhaps with the prompt(..) covered in “Input” on page 6. You
 // may prompt the user for their bank account balance, for example.
 // Have fun and be creative!
+
+// const TAXRATE = 0.08;
+// const PHONEPRICE = 99.99;
+// const ACCESORYPRICE = 9.99;
+// const SPENDINGTHRESHOLD = 200;
+// let bankBalance = 303.91;
+// let amount = 0;
+
+// const calculateTax=(amount)=>{
+//   return amount*TAXRATE;
+// }
+
+// const formatAmount = (amount)=>{
+//   return "$" + amount.toFixed(2);
+// }
+
+// while(amount < bankBalance){
+//   amount+=PHONEPRICE;
+
+//   if(amount<SPENDINGTHRESHOLD){
+//     amount+=ACCESORYPRICE;
+//   }
+// }
+
+// amount+=calculateTax(amount);
+
+// console.log("Your purchase: " + formatAmount(amount));
+
+// if(amount>bankBalance){
+//   console.log("You can't afford this purchase. :(");
+// }
+
+
