@@ -45,3 +45,93 @@ const cosine = (num)=>{
 }
 
 cosine(0);
+
+// 6. Write a function that works as a unit converter
+
+const unitconverter = (conversion, value)=>{
+    let unitcalc=0;
+    if (conversion <=0 || conversion > 12) {
+        console.log("You need to write a number in the range of 1-12")
+    } else {
+        switch (conversion) {
+            case 1:
+                // Convert yards to feet
+                unitcalc = (value * 3).toFixed(2);
+                console.log(`${value} yards is equivalent to ${unitcalc} feet`);
+                break;
+            case 2:
+                // Convert yards to inches
+                unitcalc = (value * 36).toFixed(2);
+                console.log(`${value} yards is equivalent to ${unitcalc} inches`);
+                break;  
+            case 3:
+                // Convert yards to cm
+                unitcalc = (value * 91.44).toFixed(2);
+                console.log(`${value} yards is equivalent to ${unitcalc} cm`);
+                break;
+            case 4:
+                // Convert feet to yards
+                unitcalc = (value/3).toFixed(2);
+                console.log(`${value} feet is equivalent to ${unitcalc} yards`);
+                break;
+            case 5:
+                // Convert feet to inches
+                unitcalc = (value * 12).toFixed(2);
+                console.log(`${value} feet is equivalent to ${unitcalc} inches`);
+                break;  
+            case 6:
+                // Convert feet to cm
+                unitcalc = (value * 30.48).toFixed(2);
+                console.log(`${value} feet is equivalent to ${unitcalc} cm`);
+                break;  
+            case 7:
+                // Convert inches to feet
+                unitcalc = (value/12).toFixed(2);
+                console.log(`${value} inches is equivalent to ${unitcalc} feet`);
+                break;
+            case 8:
+                // Convert inches to yards
+                unitcalc = (value/36).toFixed(2);
+                console.log(`${value} inches is equivalent to ${unitcalc} yards`);
+                break;  
+            case 9:
+                // Convert inches to cm
+                unitcalc = (value * 2.54).toFixed(2);
+                console.log(`${value} inches is equivalent to ${unitcalc} cm`);
+                break;
+            case 10:
+                // Convert cm to yards
+                unitcalc = (value/91.44).toFixed(2);
+                console.log(`${value} cm is equivalent to ${unitcalc} yards`);
+                break;
+            case 11:
+                // Convert cm to inches
+                unitcalc = (value/2.54).toFixed(2);
+                console.log(`${value} cm is equivalent to ${unitcalc} inches`);
+                break;  
+            case 12:
+                // Convert cm to feet
+                unitcalc = (value/30.48).toFixed(2);
+                console.log(`${value} cm is equivalent to ${unitcalc} feet`);
+                break;                              
+            default:
+                break;
+        }
+    }
+}
+
+
+unitconverter(12,1);
+
+// 7. Write a function that reads a word and returns it reversed
+
+const reverse = (str)=>{
+    let reversedstring ='';
+    for (let i = str.length-1; i >= 0; i--) {
+        reversedstring+=str[i];
+        
+    }
+    console.log(reversedstring);
+}
+
+reverse('Hola');
