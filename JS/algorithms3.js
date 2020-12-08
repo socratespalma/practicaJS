@@ -40,3 +40,32 @@ const gradesFull =(name1, grade1, grade2, grade3)=>{
 }
 
 gradesFull("Socrates",60,70,97);
+
+// 3. Write a function that receives a number of voltages and calculate the greater, smaller, and average voltage
+const voltages =(v1,v2,v3,v4,v5)=>{
+    let listVoltages = [v1,v2,v3,v4,v5];
+    let sumVoltages=0;
+    let smallerVoltage=listVoltages[0];
+    let greaterVoltage=listVoltages[0];
+    for (let i = 0; i < listVoltages.length; i++) {
+        sumVoltages += listVoltages[i];
+        if (listVoltages[i]>greaterVoltage) {
+            greaterVoltage=listVoltages[i];
+        } else if (listVoltages[i]<smallerVoltage) {
+            smallerVoltage=listVoltages[i];
+        }
+    }
+    let promVoltages = (sumVoltages/4).toFixed(2);
+    console.log(`The average voltage is equal to ${promVoltages}, the smaller voltage is ${smallerVoltage}, the greater voltage is ${greaterVoltage}`);
+}
+
+voltages(19,3.6,28.9,7.6,11.2);
+
+// 4. Write a function that calculates the fibonacci serie for the first 15 numbers
+const fibonacci =()=>{
+    let first = 0;
+    let second = 1;
+    let fibonacciArray = [];
+}
+
+fibonacci();
