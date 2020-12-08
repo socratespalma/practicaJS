@@ -41,7 +41,7 @@ const gradesFull =(name1, grade1, grade2, grade3)=>{
 
 gradesFull("Socrates",60,70,97);
 
-// 3. Write a function that receives a number of voltages and calculate the greater, smaller, and average voltage
+// 3. Write a function that receives a number of voltages and calculate the greatest, smallest, and average voltage
 const voltages =(v1,v2,v3,v4,v5)=>{
     let listVoltages = [v1,v2,v3,v4,v5];
     let sumVoltages=0;
@@ -56,16 +56,43 @@ const voltages =(v1,v2,v3,v4,v5)=>{
         }
     }
     let promVoltages = (sumVoltages/4).toFixed(2);
-    console.log(`The average voltage is equal to ${promVoltages}, the smaller voltage is ${smallerVoltage}, the greater voltage is ${greaterVoltage}`);
+    console.log(`The average voltage is equal to ${promVoltages}, the smallest voltage is ${smallerVoltage}, the greatest voltage is ${greaterVoltage}`);
 }
 
 voltages(19,3.6,28.9,7.6,11.2);
 
 // 4. Write a function that calculates the fibonacci serie for the first 15 numbers
 const fibonacci =()=>{
-    let first = 0;
-    let second = 1;
-    let fibonacciArray = [];
+    let fibonacciArray = [0,1];
+    for (let i = 1; i < 14; i++) {
+        let nextNumber = fibonacciArray[i]+fibonacciArray[i-1];
+        fibonacciArray.push(nextNumber);
+    }
+    console.log(`The first 15 numbers of the fibonacci serie are ${fibonacciArray}`);
 }
 
 fibonacci();
+
+// 5. Write a function that calculates the factorial of a number
+
+const factNum =(num)=>{
+    let number = num;
+    let factorial = 1;
+    for (let i = 1; i <= number; i++) {
+        factorial *= i;
+    }
+    console.log(`The factorial of ${number} is equal to ${factorial}`);
+}
+
+factNum(6);
+
+// 6. Given an array of numbers, write a function that follows the next instructions:
+//      a) Print the sum of elements
+//      b) Print the sum of its squared elements
+//      c) Prints the smaller number and its position
+//      d) Prints the greater number and its position
+//      e) Prints the average value
+//      f) Order the numbers ascendent
+//      g) Order the numbers descendent
+//      h) Calculate the multiplication
+//      i) Print the module of the array
