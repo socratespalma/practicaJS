@@ -37,14 +37,45 @@ function createPost(post) {
 // init();
 
 // Async / await with fetch
-async function fetchUsers() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
-  const data = await res.json();
-  console.log(data);
-}
+// async function fetchUsers() {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/users");
+//   const data = await res.json();
+//   console.log(data);
+// }
 
-fetchUsers();
+// fetchUsers();
 
+// * Testing with the Fetch API
+// function getInfo() {
+//   return fetch("https://jsonplaceholder.typicode.com/users", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       name: "User 1",
+//     }),
+//   })
+//     .then((res) => {
+//       res.ok ? console.log("Success") : console.log("Not successful");
+//       return res.json();
+//     })
+//     .then((data) => {
+//       console.log(data);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// }
+// getInfo();
+
+// function getGithubOrgs(url) {
+//   return fetch(url).then((response) => response.json());
+// }
+
+// getGithubOrgs("https://api.github.com/users/deekshasharma/orgs").then((res) =>
+//   console.log(res)
+// );
 // Promise.all
 // const promise1 = Promise.resolve("hello world");
 // const promise2 = 10;
