@@ -20,12 +20,12 @@ class Book {
   }
 
   static topBookStore() {
-    return "Barnes & Noble";
+    return 'Barnes & Noble';
   }
 }
 
 // Instantiate an object
-const book1 = new Book("Book one", "John Doe", "2022");
+// const book1 = new Book('Book one', 'John Doe', '2022');
 
 // console.log(book1);
 // book1.revised("2020");

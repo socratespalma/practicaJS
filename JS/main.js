@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // ------ Javascript basico -------
 
 // console.log("hola mundo");
@@ -146,7 +148,7 @@
 
 // setInterval(), ocurre varias veces despues de cierto tiempo, y setTimeout(), ocurre una vez despues de cierto tiempo
 
-//---- Arreglos ----
+// ---- Arreglos ----
 // let arreglo = ["elemento1", "elemento2", "elemento3"];
 // console.log(arreglo[1]);
 // console.log(arreglo.length);
@@ -214,7 +216,7 @@
 // document.querySelector("css selector"); devuelve el primer elemento con el nombre del selector que coincida
 // document.querySelectorAll("css selector"); devuelve una lista de elementos que coincidan con el nombre del selector
 
-let p = document.getElementById("parrafo1");
+const p = document.getElementById("parrafo1");
 p.classList.add("blue");
 // agrega clase css blue al elemento con id parrafo1
 p.textContent = "Hola soy un estudiante de ingenieria de sistemas";
@@ -222,7 +224,7 @@ p.textContent = "Hola soy un estudiante de ingenieria de sistemas";
 p.innerHTML;
 // devuelve el contenido html inicial
 
-let titulo = document.getElementById("titulo1");
+const titulo = document.getElementById("titulo1");
 // titulo.classList.add("blue"); añadir clase css a un elemento
 // titulo.classList.remove("blue");
 // eliminar clase css a un elemento
@@ -234,45 +236,45 @@ let titulo = document.getElementById("titulo1");
 
 // propiedad style solo se usa con el objetivo de hacer pruebas unitarias
 
-let enlace = document.querySelector("a");
+const enlace = document.querySelector("a");
 enlace.getAttribute("href");
 // obtiene atributo
 enlace.setAttribute("href", "https://www.reddit.com/");
 // cambia atributos en un elemento
-let imagen = document.querySelector("img");
+const imagen = document.querySelector("img");
 
 imagen.setAttribute("src", "../IMG/MarketingDigital.jpg");
 // cambia imagen por otra
 
-let tarea = document.createElement("li");
+const tarea = document.createElement("li");
 // creando elemento li
 tarea.textContent = "Tarea 3";
 // asignandole texto
-let list = document.getElementById("lista");
+const list = document.getElementById("lista");
 // tomar elemento ul
 list.appendChild(tarea);
 // añadirle el elemento li
 // si se desea agregar una tarea al inicio
-let tarea2 = document.createElement("li");
+const tarea2 = document.createElement("li");
 // crear otro elemento li
 tarea2.textContent = "Tarea 4";
 // asignarle nombre
-let primerElemento = list.children[0];
+const primerElemento = list.children[0];
 // darle la posicion inicial del elemento lista
 list.insertBefore(tarea2, primerElemento);
 // insertar en lista
 
 // si se desea eliminar una tarea de la lista
-let elementoElim = list.children[2];
+const elementoElim = list.children[2];
 // asignar tarea a eliminar (tarea 2)
 elementoElim.remove();
 // eliminarla
 
-let btn = document.querySelector(".btn");
+const btn = document.querySelector(".btn");
 
 // Eventos
 
-btn.addEventListener("click", function () {
+btn.addEventListener("click", () => {
   titulo.textContent = "Se ha hecho click";
 });
 
@@ -284,7 +286,7 @@ function clickNuevo() {
   enlace.textContent = "Se ha hecho click nuevamente";
 }
 
-let inp = document.querySelectorAll("input");
+const inp = document.querySelectorAll("input");
 
 for (let i = 0; i < inp.length; i++) {
   inp[i].addEventListener("keypress", function (event) {
@@ -294,7 +296,7 @@ for (let i = 0; i < inp.length; i++) {
   });
 }
 
-enlace.addEventListener("click", function (event) {
+enlace.addEventListener("click", (event) => {
   event.preventDefault();
   alert("No funciona el link?");
 });

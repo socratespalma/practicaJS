@@ -1,10 +1,13 @@
-import { getPokemons, getProducts, getShoppingCart } from "./async.js";
+import { getPokemons, getProducts, getShoppingCart } from './async';
 
-let numbers = [];
+/* eslint-disable array-callback-return */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable implicit-arrow-linebreak */
+/* eslint-disable no-plusplus */
 
-const randomNumberGenerator = () => {
-  return Math.floor(Math.random() * 10);
-};
+const numbers = [];
+
+const randomNumberGenerator = () => Math.floor(Math.random() * 10);
 
 // * For loop
 for (let i = 0; i < 10; i++) {
@@ -17,20 +20,14 @@ numbers.sort((a, b) => a - b);
 console.log(`This is the sorted array -> ${numbers}`);
 
 // * Filter method
-let filteredNums = numbers.filter((number) => {
-  return number >= 8;
-});
+const filteredNums = numbers.filter((number) => number >= 8);
 
 filteredNums.length === 0
-  ? console.log("There are no elements greater than 8")
-  : console.log(
-      `These is the filtered array with numbers greater than 8: ${filteredNums}`
-    );
+  ? console.log('There are no elements greater than 8')
+  : console.log(`Filtered array with numbers greater than 8: ${filteredNums}`);
 
 // * Reduce method
-let arraySum = numbers.reduce((acc, curr) => {
-  return acc + curr;
-}, 0);
+const arraySum = numbers.reduce((acc, curr) => acc + curr, 0);
 
 console.log(`The sum of the original array is: ${arraySum}`);
 

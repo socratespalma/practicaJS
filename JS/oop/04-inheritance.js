@@ -21,7 +21,7 @@ function Magazine(title, author, year, month) {
 Magazine.prototype = Object.create(Book.prototype);
 
 // Instantiate Magazine object
-const mag1 = new Magazine("Mag One", "John Doe", "2022", "Jan");
+const mag1 = new Magazine('Mag One', 'John Doe', '2022', 'Jan');
 
 // Use Magazine constructor
 Magazine.prototype.constructor = Magazine;

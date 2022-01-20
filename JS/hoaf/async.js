@@ -1,3 +1,8 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable implicit-arrow-linebreak */
+/* eslint-disable comma-dangle */
+
 const fetchData = async (url) => {
   try {
     const res = await fetch(url);
@@ -10,20 +15,20 @@ const fetchData = async (url) => {
 };
 
 const getProducts = async () => {
-  const [data, error] = await fetchData("https://fakestoreapi.com/products");
+  const [data, error] = await fetchData('https://fakestoreapi.com/products');
   !error ? console.log(data) : alert(error);
 };
 
 const getShoppingCart = async () => {
-  const [data, error] = await fetchData("https://fakestoreapi.com/carts");
+  const [data, error] = await fetchData('https://fakestoreapi.com/carts');
   !error ? console.log(data) : alert(error);
 };
 
 const getPokemons = async () => {
   const [data, error] = await fetchData(
-    "https://pokeapi.co/api/v2/pokemon?limit=50&offset=0"
+    'https://pokeapi.co/api/v2/pokemon?limit=50&offset=0',
   );
-  let pokemonNames = data.results;
+  const pokemonNames = data.results;
   !error ? console.log(pokemonNames) : alert(error);
 
   // * For loop
@@ -38,7 +43,7 @@ const getPokemons = async () => {
   // });
 
   // * Map method
-  let newArr = [];
+  const newArr = [];
 
   pokemonNames.map((pokemon) => {
     newArr.push(pokemon.name);
@@ -46,9 +51,7 @@ const getPokemons = async () => {
   console.log(`These are some pokemons: ${newArr}`);
 
   // * Filter method
-  const filteredNames = newArr.filter((name) => {
-    return name.startsWith("c");
-  });
+  const filteredNames = newArr.filter((name) => name.startsWith('c'));
   console.log(`Pokemons that start with "c": ${filteredNames}`);
 };
 

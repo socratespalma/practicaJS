@@ -1,4 +1,6 @@
 // ES6 classes
+
+/* eslint-disable max-classes-per-file */
 class Book {
   constructor(title, author, year) {
     this.title = title;
@@ -20,6 +22,6 @@ class Magazine extends Book {
 }
 
 // Instantiate magazine
-const mag1 = new Magazine("Mag one", "John Doe", "2022", "Jan");
+const mag1 = new Magazine('Mag one', 'John Doe', '2022', 'Jan');
 
 console.log(mag1);

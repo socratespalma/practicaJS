@@ -23,12 +23,12 @@ Book.prototype.revise = function (newYear) {
 };
 
 // Instantiate an object
-const book1 = new Book("Book One", "John Doe", "2013");
-const book2 = new Book("Book Two", "Jane Doe", "2014");
+const book1 = new Book('Book One', 'John Doe', '2013');
+const book2 = new Book('Book Two', 'Jane Doe', '2014');
 
 console.log(book1.title);
 console.log(book1.getAge());
 
 console.log(book2);
-book2.revise("2022");
+book2.revise('2022');
 console.log(book2);

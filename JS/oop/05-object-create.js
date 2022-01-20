@@ -16,9 +16,9 @@ const bookProtos = {
 // book1.year = "2013";
 
 const book1 = Object.create(bookProtos, {
-  title: { value: "Book one" },
-  author: { value: "John Doe" },
-  year: { value: "2020" },
+  title: { value: 'Book one' },
+  author: { value: 'John Doe' },
+  year: { value: '2020' },
 });
 
 console.log(book1);

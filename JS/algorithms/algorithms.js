@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // 1. Write a function that receives 3 numbers and then analyze the next rules:
 // if numbers > 10 sum them, if numbers > 100 subtract them, if numbers > 1000 multiply them, else divide them
 
@@ -43,19 +45,19 @@ multip(13);
 
 // 4. Write a function that receive the radius of a circunference and calculates area, diameter and perimeter
 
-const PI = Math.PI;
+const { PI } = Math;
 
 const circumference = (a) => {
   switch (a) {
     case 0:
-      console.log("Radius cannot be zero");
+      console.log('Radius cannot be zero');
       break;
     default:
-      let diameter = Math.pow(a, 2);
-      let area = (PI * (Math.pow(diameter, 2) / 4)).toFixed(2);
-      let perimeter = (PI * diameter).toFixed(2);
+      const diameter = a ** 2;
+      const area = (PI * (diameter ** 2 / 4)).toFixed(2);
+      const perimeter = (PI * diameter).toFixed(2);
       console.log(
-        `The diameter of a circumference is ${diameter} , the area is ${area} , and perimeter is ${perimeter}`
+        `The diameter of a circumference is ${diameter} , the area is ${area} , and perimeter is ${perimeter}`,
       );
   }
 };
@@ -90,7 +92,7 @@ comparison(1, 2);
 // 7. Write a function that convert Celsius to Fahrenheit
 
 const temperature = (a) => {
-  let tempFar = a * 1.8 + 32;
+  const tempFar = a * 1.8 + 32;
   console.log(`${a} Celsius is equal to ${tempFar} Fahrenheit`);
 };
 
@@ -152,5 +154,3 @@ temperature(33);
 // if(amount>bankBalance){
 //   console.log("You can't afford this purchase. :(");
 // }
-
-

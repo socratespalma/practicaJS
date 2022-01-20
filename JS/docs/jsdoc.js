@@ -5,20 +5,20 @@
  * A random variable with the name of somebody
  * @type {String}
  */
-let randomName = "Peter";
+// const randomName = 'Peter';
 
 /**
  * A random variable with a number
  * @type {Number}
  */
-let randomNum = 24;
+// const randomNum = 24;
 
 // * Arrays
 /**
  * Random array of numbers
  * @type {Array<Number>}
  */
-let numberArray = [23, 24, 25, 26, 27, 28];
+const numberArray = [23, 24, 25, 26, 27, 28];
 numberArray.push(29);
 console.log(numberArray);
 
@@ -26,8 +26,8 @@ console.log(numberArray);
  * Random array of numbers and strings
  * @type {Array<Number | String>}
  */
-let mixedArray = [22, "fsg", 24, "sdg", 26];
-mixedArray.push("hfsj");
+const mixedArray = [22, 'fsg', 24, 'sdg', 26];
+mixedArray.push('hfsj');
 console.log(mixedArray);
 
 // * Objects
@@ -37,8 +37,8 @@ console.log(mixedArray);
  */
 const person = {
   id: 1,
-  firstName: "John",
-  lastName: "Doe",
+  firstName: 'John',
+  lastName: 'Doe',
   age: 30,
 };
 console.log(person);
@@ -48,10 +48,10 @@ console.log(person);
  * @type {{id: number | string, firstName: string, lastName: string, age: number | string}}
  */
 const person2 = {
-  id: "2",
-  firstName: "Jane",
-  lastName: "Doe",
-  age: "25",
+  id: '2',
+  firstName: 'Jane',
+  lastName: 'Doe',
+  age: '25',
 };
 console.log(person2);
 
@@ -74,9 +74,7 @@ console.log(add(1, 2));
  * @param {number} b second value
  * @returns {string}
  */
-const subtract = (a, b) => {
-  return `The result is: ${a - b}`;
-};
+const subtract = (a, b) => `The result is: ${a - b}`;
 console.log(subtract(1, 2));
 
 // * Custom types
@@ -94,8 +92,8 @@ console.log(subtract(1, 2));
  */
 const newUser = {
   id: 1,
-  username: "Ryan",
-  password: "test1",
+  username: 'Ryan',
+  password: 'test1',
   isActive: true,
 };
 
@@ -127,7 +125,7 @@ class Programmer {
    */
   getInfo() {
     console.log(
-      `I am ${this.fullname} and my favorite language is ${this.language}`
+      `I am ${this.fullname} and my favorite language is ${this.language}`,
     );
   }
 }
@@ -135,8 +133,8 @@ class Programmer {
 /**
  * More information in {@link Programmer}
  */
-const programmerOne = new Programmer({ fullname: "Ryan Ray" }, "JS");
-const programmerTwo = new Programmer({ fullname: "Joe Ray" }, "TS");
+const programmerOne = new Programmer({ fullname: 'Ryan Ray' }, 'JS');
+const programmerTwo = new Programmer({ fullname: 'Joe Ray' }, 'TS');
 
 programmerOne.getInfo();
 programmerTwo.getInfo();
